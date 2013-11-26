@@ -4,6 +4,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/sunnyxx/immobSDK.git'}
   s.source_files = 'immobSDK.framework/Headers/*.h'
   s.preserve_paths = 'immobSDK.framework'
-  s.frameworks = 'immobSDK', 'AdSupport', 'StoreKit', 'CFNetwork', 'SystemConfiguration', 'MobileCoreServices', 'QuartzCore', 'MessageUI', 'AudioToolbox', 'CoreLocation', 'EventKit', 'EventKitUI', 'MediaPlayer', 'CoreTelephony', 'MapKit', 'Accelerate', 'Security', 'libz'
+  s.frameworks = 'immobSDK', 'AdSupport', 'StoreKit', 'CFNetwork', 'SystemConfiguration', 'MobileCoreServices', 'QuartzCore', 'MessageUI', 'AudioToolbox', 'CoreLocation', 'EventKit', 'EventKitUI', 'MediaPlayer', 'CoreTelephony', 'MapKit', 'Accelerate', 'Security'
+  s.libraries = 'sqlite3', 'libz'
   s.xcconfig  =  { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/immobSDK"' }
 end
